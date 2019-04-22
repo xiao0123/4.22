@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				-webkit-perspective: 800px;
+			}
+			.cube{
+				width:200px;
+				height: 200px;
+				border: 1px solid red;
+				position: relative;
+				-webkit-transform-style:preserve-3d ;
+				margin: 50px auto;
+			}
+			.box{
+				width:200px;
+				height: 200px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				text-align: center;
+				line-height: 200px;
+				font-size: 100px;
+				color: white;
+			}
+			.box1{
+				background-color: red;
+				opacity: 0.6;
+				-webkit-transform:translateZ(100px) ;
+			}
+			.box2{
+				background-color: palevioletred;
+				opacity: 0.6;
+				-webkit-transform:rotateY(90deg) translateZ(100px) ;
+			}
+			.box3{
+				background-color: yellow;
+				opacity: 0.6;
+				-webkit-transform:rotateY(180deg) translateZ(100px) ;
+			}
+			.box4{
+				background-color: green;
+				opacity: 0.6;
+				-webkit-transform:rotateY(270deg) translateZ(100px) ;
+			}
+			.box5{
+				background-color: blue;
+				opacity: 0.6;
+				-webkit-transform:rotateX(90deg) translateZ(100px) ;
+			}
+			
+			.box6{
+				background-color: darkslategray;
+				opacity: 0.6;
+				-webkit-transform:rotateX(270deg) translateZ(100px) ;
+			}
+			
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="cube">
+			<div class="box box1">1</div>
+			<div class="box box2">2</div>
+			<div class="box box3">3</div>
+			<div class="box box4">4</div>
+			<div class="box box5">5</div>
+			<div class="box box6">6</div>
+		</div>
+		<input type="range" name="rotateX" id="rotateX" value="0" min="0" max="360" />
+		<input type="range" name="rotateY" id="rotateY" value="0" min="0" max="360" />
+		<input type="range" name="rotateZ" id="rotateZ" value="0" min="0" max="360" />
+		
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("input").on("input",function(){
+				
+				var x=$("#rotateX").val();
+				var y=$("#rotateY").val();
+				var z=$("#rotateZ").val();
+				
+				$(".cube").css("-webkit-transform","rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)")
+				
+			})
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

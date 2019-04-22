@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: darkseagreen;
+				margin: 100px auto;
+				-webkit-transform-origin: 0px 0px 0px;
+			}
+			
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<input type="range" name="rotateX" id="rotateX" value="0" min="0" max="360" />
+		<input type="range" name="rotateY" id="rotateY" value="0" min="0" max="360" />
+		<input type="range" name="rotateZ" id="rotateZ" value="0" min="0" max="360" />
+		
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("input").on("input",function(){
+				
+				var x=$("#rotateX").val();
+				var y=$("#rotateY").val();
+				var z=$("#rotateZ").val();
+				
+				$(".box").css("-webkit-transform","rotateX("+x+"deg) rotateY("+y+"deg) rotateZ("+z+"deg)");
+				
+				
+			})
+			
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>
