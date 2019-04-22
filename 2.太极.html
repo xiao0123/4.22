@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: gray;
+			}
+			.box{
+				width:200px;
+				height: 100px;
+				background-color: white;
+				border-bottom: 100px solid black;
+				margin: 100px auto;
+				border-radius: 50%;
+				position: relative;
+				-webkit-animation: dong 5s linear;
+			}
+			.box:before{
+				width:100px;
+				height: 100px;
+				content: "";
+				display: block;
+				background-color: black;
+				border-radius: 50%;
+				position: absolute;
+				left: 0px;
+				top:50px;
+				border:25px solid white;
+				box-sizing: border-box;
+			}
+			.box:after{
+				width:100px;
+				height: 100px;
+				content: "";
+				display: block;
+				background-color: white;
+				border-radius: 50%;
+				position: absolute;
+				right: 0px;
+				top:50px;
+				border: 25px solid black;
+				box-sizing: border-box;
+			}
+			@-webkit-keyframes dong{
+				from{-webkit-transform: rotate(0deg);}
+				to{-webkit-transform: rotate(360deg);}
+			}
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>
